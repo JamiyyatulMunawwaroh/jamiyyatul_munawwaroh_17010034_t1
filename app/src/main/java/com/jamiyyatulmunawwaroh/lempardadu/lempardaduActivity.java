@@ -19,7 +19,6 @@ public class lempardaduActivity extends AppCompatActivity {
     private ImageView imgSatu;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,24 +69,30 @@ public class lempardaduActivity extends AppCompatActivity {
     }
 
     private void lempardadu() {
-        //memanggil fungsi acak
-        Random acak = new Random();
-////        //membuat variabel angka
-        String angka = String.valueOf(1+ acak.nextInt (6));
-        txtText.setText(angka);
 
-//        int angka[] = {1,2,3,4,5,6};
-//        for (int x = 1; x<=6; x++){
-//            String angka = String.valueOf(x +" ");
-//        }
+         // TUGAS 1
+        for (int i=1; i<=6; i++){
+            txtText.setText(String.valueOf(i));
+        }
 
-
-        if (angka.equals("6")){
+        if (txtText.getText().toString().equals("6")){
             Toast.makeText(lempardaduActivity.this, "Maksimum", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(lempardaduActivity.this, "Belum Maksimum", Toast.LENGTH_SHORT).show();
         }
 
+        // TUGAS 2 (ACAK)
+        //memanggil fungsi acak
+//        Random acak = new Random();
+//        //membuat variabel angka
+//        String angka = String.valueOf(1+ acak.nextInt (6));
+//        txtText.setText(angka);
+//
+//        if (angka.equals("6")){
+//            Toast.makeText(lempardaduActivity.this, "Maksimum", Toast.LENGTH_SHORT).show();
+//        } else {
+//            Toast.makeText(lempardaduActivity.this, "Belum Maksimum", Toast.LENGTH_SHORT).show();
+//        }
 
     }
 
